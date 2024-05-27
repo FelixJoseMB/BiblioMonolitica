@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BiblioMonolitica.web",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Service",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\Controllers",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\Models",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\Properties",
+    "\\BiblioMonolitica.web\\BiblioMonolitica.web\\Views"
+  ],
+  "SelectedNode": "\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Dtos\\BibliotecaDtoAdd.cs",
+  "PreviewInSolutionExplorer": false
+}
