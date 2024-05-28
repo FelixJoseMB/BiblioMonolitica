@@ -7,16 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="BLogin\Dtos\" />
-    <Folder Include="BLogin\Exeptions\" />
-    <Folder Include="BLogin\Interfaces\" />
-    <Folder Include="BLogin\Service\" />
-    <Folder Include="BL\Dtos\" />
-    <Folder Include="BL\Exeptions\" />
-    <Folder Include="BL\Interfaces\" />
-    <Folder Include="BL\Service\" />
-    <Folder Include="Data\Exeptions\" />
-    <Folder Include="Data\Interfaces\" />
+    <Compile Remove="BL\**" />
+    <Content Remove="BL\**" />
+    <EmbeddedResource Remove="BL\**" />
+    <None Remove="BL\**" />
   </ItemGroup>
 
 </Project>
