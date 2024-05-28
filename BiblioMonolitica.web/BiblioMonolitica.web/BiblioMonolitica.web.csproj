@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="BLogin\Dtos\" />
+    <Folder Include="BLogin\Exeptions\" />
+    <Folder Include="BLogin\Interfaces\" />
+    <Folder Include="BLogin\Service\" />
     <Folder Include="BL\Dtos\" />
     <Folder Include="BL\Exeptions\" />
     <Folder Include="BL\Interfaces\" />
