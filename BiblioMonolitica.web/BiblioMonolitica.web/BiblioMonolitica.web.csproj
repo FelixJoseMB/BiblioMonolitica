@@ -15,7 +15,6 @@
     <Folder Include="BL\Exeptions\" />
     <Folder Include="BL\Interfaces\" />
     <Folder Include="BL\Service\" />
-    <Folder Include="Data\Entities\" />
     <Folder Include="Data\Exeptions\" />
     <Folder Include="Data\Interfaces\" />
   </ItemGroup>
