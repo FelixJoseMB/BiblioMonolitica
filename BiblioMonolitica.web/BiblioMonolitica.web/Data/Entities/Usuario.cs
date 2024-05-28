@@ -1,6 +1,8 @@
-﻿namespace BiblioMonolitica.web.Data.Entities
+﻿using BiblioMonolitica.web.Data.Core;
+
+namespace BiblioMonolitica.web.Data.Entities
 {
-    public class Usuario
+    public class Usuario : BaseEntity
     {
     }
 }
