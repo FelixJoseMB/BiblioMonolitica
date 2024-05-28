@@ -28,3 +28,4 @@ C:\PRO\itla\BiblioMonolitica\BiblioMonolitica.web\BiblioMonolitica.web\obj\Debug
 C:\PRO\itla\BiblioMonolitica\BiblioMonolitica.web\BiblioMonolitica.web\obj\Debug\net8.0\BiblioMonolitica.web.pdb
 C:\PRO\itla\BiblioMonolitica\BiblioMonolitica.web\BiblioMonolitica.web\obj\Debug\net8.0\BiblioMonolitica.web.genruntimeconfig.cache
 C:\PRO\itla\BiblioMonolitica\BiblioMonolitica.web\BiblioMonolitica.web\obj\Debug\net8.0\ref\BiblioMonolitica.web.dll
+C:\pro\itla\BiblioMonolitica\BiblioMonolitica.web\BiblioMonolitica.web\obj\Debug\net8.0\BiblioMonolitica.web.sourcelink.json
