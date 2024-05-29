@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiblioMonolitica.web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+521b706be34d81ec4bab0166bb85cb0c89962a5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+439bacbb8775864f43d65fa6ab5d9cbe51bed6cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiblioMonolitica.web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiblioMonolitica.web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
