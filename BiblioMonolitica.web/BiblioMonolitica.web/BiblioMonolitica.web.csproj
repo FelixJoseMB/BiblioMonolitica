@@ -13,4 +13,11 @@
     <None Remove="BL\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Entities\" />
+    <Folder Include="Data\Interfaces\" />
+    <Folder Include="Data\Exeptions\" />
+    <Folder Include="Data\Models\" />
+  </ItemGroup>
+
 </Project>

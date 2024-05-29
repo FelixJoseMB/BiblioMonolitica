@@ -8,7 +8,7 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Kayle\\.nuget\\packages\\": {}
+    "C:\\Users\\Juan Jose\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
       "projectName": "BiblioMonolitica.web",
       "projectPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
-      "packagesPath": "C:\\Users\\Kayle\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Juan Jose\\.nuget\\packages\\",
       "outputPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kayle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Juan Jose\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

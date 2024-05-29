@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PRO\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {}
+    "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {}
   },
   "projects": {
-    "C:\\PRO\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {
+    "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PRO\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
+        "projectUniqueName": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
         "projectName": "BiblioMonolitica.web",
-        "projectPath": "C:\\PRO\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
-        "packagesPath": "C:\\Users\\Kayle\\.nuget\\packages\\",
-        "outputPath": "C:\\PRO\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj\\",
+        "projectPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
+        "packagesPath": "C:\\Users\\Juan Jose\\.nuget\\packages\\",
+        "outputPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kayle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Juan Jose\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
