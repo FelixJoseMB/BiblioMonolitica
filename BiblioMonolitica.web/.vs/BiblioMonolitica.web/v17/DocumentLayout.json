@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\blogin\\service\\lectorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\blogin\\service\\lectorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\data\\exeptions\\lectorexeptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\data\\exeptions\\lectorexeptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\data\\interfaces\\ilector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\data\\interfaces\\ilector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\data\\entities\\lector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\data\\dbobjects\\lectordb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\data\\exeptions\\lectorexeptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\data\\exeptions\\lectorexeptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\blogin\\service\\lectorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\blogin\\service\\lectorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ILector.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\Interfaces\\ILector.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\Data\\Interfaces\\ILector.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\Interfaces\\ILector.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\Data\\Interfaces\\ILector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T02:33:00.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LectorServices.cs",
               "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BLogin\\Service\\LectorServices.cs",
               "RelativeDocumentMoniker": "BiblioMonolitica.web\\BLogin\\Service\\LectorServices.cs",
@@ -47,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LectorExeptions.cs",
               "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\Exeptions\\LectorExeptions.cs",
               "RelativeDocumentMoniker": "BiblioMonolitica.web\\Data\\Exeptions\\LectorExeptions.cs",
@@ -60,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LectorDB.cs",
               "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\DbObjects\\LectorDB.cs",
               "RelativeDocumentMoniker": "BiblioMonolitica.web\\Data\\DbObjects\\LectorDB.cs",
@@ -73,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Lector.cs",
               "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\Entities\\Lector.cs",
               "RelativeDocumentMoniker": "BiblioMonolitica.web\\Data\\Entities\\Lector.cs",
