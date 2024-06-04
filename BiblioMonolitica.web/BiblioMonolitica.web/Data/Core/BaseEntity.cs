@@ -15,10 +15,6 @@
 
         public required string Correo { get; set; }
 
-        protected BaseEntity() 
-        {
-            this.FechaCreacion = DateTime.Now;
-        }
 
 
 
