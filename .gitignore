@@ -1,0 +1,7 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/BiblioMonolitica.web/BiblioMonolitica.web/Data/Exeptions/Ss.cs
+/BiblioMonolitica.web/BiblioMonolitica.web/Data/Interfaces/L.cs
+/BiblioMonolitica.web/BiblioMonolitica.web/Data/Entities/X.cs
