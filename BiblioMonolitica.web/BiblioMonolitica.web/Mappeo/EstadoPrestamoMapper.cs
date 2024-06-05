@@ -39,9 +39,9 @@ namespace BiblioMonolitica.web.Mappeo
             {
             updateEntity.Descripcion = updateModel.Descripcion;
             updateEntity.Estado = updateModel.Estado;
-            updateEntity.UserMod = updateModel.userMod;
+            updateEntity.UserMod = updateModel.UserMod;
             updateEntity.FechaModificacion = updateModel.FechaModificacion;
-            }
+         }
 
         /*DeleteEntityEstadoPrestamo(DeleteEstadoPrestamoModel deleteModel, EstadoPrestamo deleteEntity)
          Elimina una entidad EstadoPrestamo existente con los datos 

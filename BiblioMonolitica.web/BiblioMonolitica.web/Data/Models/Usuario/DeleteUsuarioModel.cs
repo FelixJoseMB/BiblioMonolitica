@@ -1,8 +1,8 @@
-﻿using BiblioMonolitica.web.Data.Models.BaseEntityModels;
+﻿using BiblioMonolitica.web.Data.Core;
 
 namespace BiblioMonolitica.web.Data.Models.Usuario
 {
-    public class DeleteUsuarioModel : BaseModelEntities
+    public class DeleteUsuarioModel : BaseEntity
     {
     }
 }

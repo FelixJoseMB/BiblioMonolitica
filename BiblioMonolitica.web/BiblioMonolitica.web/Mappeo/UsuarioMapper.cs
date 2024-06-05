@@ -49,7 +49,7 @@ namespace BiblioMonolitica.web.Mappeo
             entityUsuario.Correo = modelUsuario.Correo;
             entityUsuario.Clave = modelUsuario.Clave;
             entityUsuario.FechaModificacion = modelUsuario.FechaModificacion;
-            entityUsuario.UserMod = modelUsuario.userMod;
+            entityUsuario.UserMod = modelUsuario.UserMod;
         
         }
 

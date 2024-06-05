@@ -11,7 +11,7 @@
 
         public DateTime? FechaCreacion { get; set; }
 
-
+        public int idEstadoPrestamo { get; set; }
         public  string? Descripcion { get; set; }
 
         public int? Codigo { get; set; }
@@ -29,8 +29,9 @@
         public string userDeleted { get; set; }
 
         public DateTime? FechaEliminacion { get; set; }
+        public int idUsuario { get; set; }
 
-
+        public string NombreApellidos { get; set; }
 
 
     }

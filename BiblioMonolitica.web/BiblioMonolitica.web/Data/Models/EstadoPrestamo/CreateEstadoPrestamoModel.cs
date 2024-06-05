@@ -1,8 +1,8 @@
-﻿using BiblioMonolitica.web.Data.Models.BaseEntityModels;
+﻿using BiblioMonolitica.web.Data.Core;
 
 namespace BiblioMonolitica.web.Data.Models.EstadoPrestamo
 {
-    public class CreateEstadoPrestamoModel : BaseModelEntities
+    public class CreateEstadoPrestamoModel : BaseEntity
     {
 
         

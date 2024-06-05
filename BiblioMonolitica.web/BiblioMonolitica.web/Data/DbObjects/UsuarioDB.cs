@@ -75,7 +75,7 @@ namespace BiblioMonolitica.web.Data.DbObjects
             usuarioToUpdate.NombreApellidos = updateUsuario.NombreApellidos;
             usuarioToUpdate.Correo = updateUsuario.Correo;
             usuarioToUpdate.Clave = updateUsuario.Clave;
-            usuarioToUpdate.UserMod = updateUsuario.userMod;
+            usuarioToUpdate.UserMod = updateUsuario.UserMod;
             usuarioToUpdate.FechaModificacion = updateUsuario.FechaModificacion;
 
             this.context.Usuario.Update(usuarioToUpdate);
