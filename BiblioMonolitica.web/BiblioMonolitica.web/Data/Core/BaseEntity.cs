@@ -7,13 +7,13 @@
         public DateTime FechaCreacion { get; set; }
 
 
-        public required string Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
         public int Codigo { get; set; }
 
-        public required string Clave { get; set; }
+        public string Clave { get; set; }
 
-        public required string Correo { get; set; }
+        public string Correo { get; set; }
 
 
 
