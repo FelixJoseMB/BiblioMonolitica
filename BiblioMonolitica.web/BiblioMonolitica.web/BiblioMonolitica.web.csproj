@@ -13,4 +13,12 @@
     <None Remove="BL\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="R:\ILibro.cs" Link="ILibro.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Exeptions\" />
+  </ItemGroup>
+
 </Project>
