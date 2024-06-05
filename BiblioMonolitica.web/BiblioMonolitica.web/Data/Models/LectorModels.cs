@@ -1,4 +1,6 @@
-﻿namespace BiblioMonolitica.web.Data.Models
+﻿using BiblioMonolitica.web.Data.Entities;
+
+namespace BiblioMonolitica.web.Data.Models
 {
     public class LectorModels
     {
@@ -10,5 +12,17 @@
         public string? Apellido { get; internal set; }
         public string? Clave { get; internal set; }
         public int? Id { get; internal set; }
+
+        public Lector ToEntity()
+        {
+            return new Lector
+            {
+                IdLector = this.IdLector,
+                Nombre = this.Nombre,
+                Apellido = this.Apellido,
+                Clave = this.Clave,
+                FechaCreacion = this.FechaCreacion
+            };
+        }
     }
 }

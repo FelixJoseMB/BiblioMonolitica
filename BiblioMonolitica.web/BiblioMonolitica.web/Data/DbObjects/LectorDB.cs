@@ -17,60 +17,30 @@ namespace BiblioMonolitica.web.Data.DbObjects
 
         public LectorModels GetLector(int IdLector)
         {
-           var lector = this.context.Lectors.Find(IdLector);
-
-            LectorModels lectorModels = new LectorModels()
-            {
-                IdLector = lector.IdLector, 
-                Nombre = lector.Nombre,
-                Apellido = lector.Apellido,
-                Clave = lector.Clave,
-                FechaCreacion = lector.FechaCreacion
-            };
-
-           return lectorModels;
+            var lector = this.context.Lectors.Find(IdLector);
+            return lector?.ToModel();
         }
 
         public List<LectorModels> GetLectors()
         {
-            return this.context.Lectors.Select(lector => new LectorModels()
-            {
-                IdLector = lector.IdLector,
-                Nombre = lector.Nombre,
-                Apellido = lector.Apellido,
-                Clave = lector.Clave,
-                FechaCreacion = lector.FechaCreacion
-
-            }).ToList();
+            return this.context.Lectors.Select(lector => lector.ToModel()).ToList();
         }
 
         public void RemoveLector(LectorRemoveModel lectorRemove)
         {
             Lector lectorToDelete = this.context.Lectors.Find(lectorRemove.IdLector);
 
-            if (lectorToDelete is null)
-            {
-            }
-
             lectorToDelete.IdLector = lectorRemove.IdLector;
             lectorToDelete.Nombre = lectorRemove.Nombre;
-            lectorToDelete.Codigo = lectorRemove.Codigo;
             lectorToDelete.Apellido = lectorRemove.Apellido;
 
-            this.context.Lectors.Update(lectorToDelete);
+            this.context.Lectors.Remove(lectorToDelete);
             this.context.SaveChanges();
         }
 
         public void SaveLector(LectorSaveModel lectorSave)
         {
-            Lector lector = new Lector()
-            {
-                IdLector = lectorSave.IdLector,
-                Nombre = lectorSave.Nombre,
-                Apellido = lectorSave.Apellido,
-                Clave = lectorSave.Clave,
-                FechaCreacion = lectorSave.FechaCreacion
-            };
+            Lector lector = lectorSave.ToEntity();
             this.context.Lectors.Add(lector);
             this.context.SaveChanges();
         }
@@ -78,14 +48,18 @@ namespace BiblioMonolitica.web.Data.DbObjects
         public void UpdateLector(LectorUpdateModel updateModel)
         {
             Lector lectorToUpdate = this.context.Lectors.Find(updateModel.IdLector);
+
+            if (lectorToUpdate == null)
             {
-                lectorToUpdate.IdLector = lectorToUpdate.IdLector;
-                lectorToUpdate.Nombre = lectorToUpdate.Nombre;
-                lectorToUpdate.Apellido = lectorToUpdate.Apellido;
-                lectorToUpdate.Clave = lectorToUpdate.Clave;
-            };
+                return;
+            }
+
+            updateModel.UpdateEntity(lectorToUpdate);
+
             this.context.Lectors.Update(lectorToUpdate);
             this.context.SaveChanges();
         }
     }
 }
+
+

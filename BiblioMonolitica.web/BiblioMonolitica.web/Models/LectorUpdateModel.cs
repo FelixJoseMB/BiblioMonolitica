@@ -1,4 +1,6 @@
-﻿namespace BiblioMonolitica.web.Models
+﻿using BiblioMonolitica.web.Data.Entities;
+
+namespace BiblioMonolitica.web.Models
 {
     public class LectorUpdateModel
     {
@@ -9,5 +11,12 @@
         public string? Clave { get; set; }
         public bool? Estado { get; set; }
         public DateTime? FechaCreacion { get; set; }
+
+        public void UpdateEntity(Lector lector)
+        {
+            lector.Nombre = this.Nombre;
+            lector.Apellido = this.Apellido;
+            lector.Clave = this.Clave;
+        }
     }
 }
