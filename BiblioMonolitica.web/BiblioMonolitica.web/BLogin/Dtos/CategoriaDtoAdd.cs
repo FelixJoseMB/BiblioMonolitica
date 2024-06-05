@@ -1,6 +1,6 @@
 ﻿namespace BiblioMonolitica.web.BLogin.Dtos
 {
-    public class CategoriaDtoAdd
+    public record CategoriaDtoAdd
     {
     }
 }
