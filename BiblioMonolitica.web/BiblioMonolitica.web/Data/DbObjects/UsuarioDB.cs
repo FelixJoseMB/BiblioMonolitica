@@ -4,6 +4,7 @@ using BiblioMonolitica.web.Data.Interfaces;
 using BiblioMonolitica.web.Data.Models;
 using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
 using BiblioMonolitica.web.Data.Models.Usuario;
+using BiblioMonolitica.web.Mappeo;
 
 namespace BiblioMonolitica.web.Data.DbObjects
 {
@@ -18,65 +19,42 @@ namespace BiblioMonolitica.web.Data.DbObjects
 
         public void Create(CreateUsuarioModel createUsuario)
         {
-            Usuario usuario = new Usuario()
-            {
-               NombreApellidos = createUsuario.NombreApellidos,
-               Correo = createUsuario.Correo,
-               Clave = createUsuario.Clave,
-               FechaCreacion = createUsuario.FechaCreacion
-
-
-            };
-
+            var usuario = UsuarioMapper.ToEntity(createUsuario);
             this.context.Usuario.Add(usuario);
             this.context.SaveChanges();
         }
 
         public void Delete(DeleteUsuarioModel deleteUsuario)
         {
-            throw new NotImplementedException();
+            Usuario usuarioToDelete = this.context.Usuario.Find(deleteUsuario.idUsuario);
+
+
+            // Utilizar el método DeleteEntityEstadoPrestamo para eliminar la entidad con los datos de eliminación
+            UsuarioMapper.DeleteEntityUsuario(deleteUsuario, usuarioToDelete);
+
+            // Actualizar la entidad en el contexto y guardar los cambios en la base de datos
+            this.context.Usuario.Remove(usuarioToDelete);
+            this.context.SaveChanges();
         }
 
         public List<UsuarioModel> GetUsuario()
         {
-            return this.context.Usuario.Select(usuario => new UsuarioModel()
-            {
-
-                NombreApellidos = usuario.NombreApellidos,
-                esActivo = usuario.esActivo,
-                Correo = usuario.Correo,
-                idUsuario = usuario.idUsuario,
-                FechaCreacion = usuario.FechaCreacion
-
-            }).ToList();
+            return this.context.Usuario.Select(UsuarioMapper.ToModel).ToList();
         }
 
         public UsuarioModel GetUsuario(int idUsuario)
         {
-            var usuario = this.context.Usuario.Find(idUsuario);
+            var estadoPrestamo = this.context.Usuario.Find(idUsuario);
 
-            UsuarioModel usuarioModel = new UsuarioModel()
-            {
-                NombreApellidos = usuario.NombreApellidos,
-                esActivo = usuario.esActivo,
-                Correo = usuario.Correo,
-                idUsuario = usuario.idUsuario,
-                FechaCreacion = usuario.FechaCreacion
-            };
-            return usuarioModel;
+            return UsuarioMapper.ToModel(estadoPrestamo);
         }
 
         
 
         public void Update(UpdateUsuarioModel updateUsuario)
         {
-            Usuario usuarioToUpdate = this.context.Usuario.Find(updateUsuario.idUsuario);
-
-            usuarioToUpdate.NombreApellidos = updateUsuario.NombreApellidos;
-            usuarioToUpdate.Correo = updateUsuario.Correo;
-            usuarioToUpdate.Clave = updateUsuario.Clave;
-            usuarioToUpdate.UserMod = updateUsuario.UserMod;
-            usuarioToUpdate.FechaModificacion = updateUsuario.FechaModificacion;
+            Usuario usuarioToUpdate = this.context.Usuario.Find(updateUsuario.idEstadoPrestamo);
+            UsuarioMapper.UpdateEntityUsuario(updateUsuario, usuarioToUpdate);
 
             this.context.Usuario.Update(usuarioToUpdate);
             this.context.SaveChanges();
