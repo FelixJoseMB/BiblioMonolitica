@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Compile Include="R:\ILibro.cs" Link="ILibro.cs" />
+    <Compile Include="R:\prog\BiblioMonolitica.web.sln" Link="BiblioMonolitica.web.sln" />
   </ItemGroup>
 
   <ItemGroup>

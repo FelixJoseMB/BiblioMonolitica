@@ -1,6 +1,6 @@
 ﻿using BiblioMonolitica.web.Data.Core;
 using BiblioMonolitica.web.Data.Core.BiblioMonolitica.web.Data.Core;
-using BiblioMonolitica.web.Data.Models;
+using BiblioMonolitica.web.Data.Model;
 
 namespace BiblioMonolitica.web.Data.Entities
 {
@@ -15,9 +15,9 @@ namespace BiblioMonolitica.web.Data.Entities
         public byte[]? Portada { get; set; }
         public int? Ejemplares { get; set; }
 
-        public LibroModels ToModel()
+        public LibroModel ToModel()
         {
-            return new LibroModels
+            return new LibroModel
             {
                 IdLibro = this.IdLibro,
                 Titulo = this.Titulo,
@@ -33,3 +33,4 @@ namespace BiblioMonolitica.web.Data.Entities
         }
     }
 }
+

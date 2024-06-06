@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Source\\Repos\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {}
+    "R:\\prog\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Source\\Repos\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {
+    "R:\\prog\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
+        "projectUniqueName": "R:\\prog\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
         "projectName": "BiblioMonolitica.web",
-        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
+        "projectPath": "R:\\prog\\BiblioMonolitica.web\\BiblioMonolitica.web\\BiblioMonolitica.web.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj\\",
+        "outputPath": "R:\\prog\\BiblioMonolitica.web\\BiblioMonolitica.web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,21 +1,31 @@
 ﻿namespace BiblioMonolitica.web.Data.Core
 {
-    public abstract class BaseEntity
+    using System;
+
+    namespace BiblioMonolitica.web.Data.Core
     {
-        public bool Estado { get; set; }
+        public abstract class BaseEntity
+        {
+            public bool? Estado { get; set; }
+            public DateTime? FechaCreacion { get; set; }
 
-        public DateTime FechaCreacion { get; set; }
+            protected BaseEntity()
+            {
+                this.FechaCreacion = DateTime.Now;
+            }
+        }
 
-
-        public required string Descripcion { get; set; }
-
-        public int Codigo { get; set; }
-
-        public required string Clave { get; set; }
-
-        public required string Correo { get; set; }
-
-
-
+        public class Libro : BaseEntity
+        {
+            public int IdLibro { get; set; }
+            public string? Titulo { get; set; }
+            public string? Autor { get; set; }
+            public int? IdCategoria { get; set; }
+            public string? Editorial { get; set; }
+            public string? Ubicacion { get; set; }
+            public byte[]? Portada { get; set; }
+            public int? Ejemplares { get; set; }
+        }
     }
+
 }
