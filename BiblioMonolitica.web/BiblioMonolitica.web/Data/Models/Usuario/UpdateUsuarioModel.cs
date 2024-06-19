@@ -2,8 +2,8 @@
 
 namespace BiblioMonolitica.web.Data.Models.Usuario
 {
-    public class UpdateUsuarioModel : BaseEntity
+    public class UpdateUsuarioModel: UsuarioBaseModel
     {
-       
+
     }
 }

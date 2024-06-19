@@ -47,10 +47,7 @@ namespace BiblioMonolitica.web.Mappeo
             entityUsuario.idUsuario = modelUsuario.idUsuario;
             entityUsuario.NombreApellidos = modelUsuario.NombreApellidos;
             entityUsuario.Correo = modelUsuario.Correo;
-            entityUsuario.Clave = modelUsuario.Clave;
-            entityUsuario.FechaModificacion = modelUsuario.FechaModificacion;
-            entityUsuario.UserMod = modelUsuario.UserMod;
-        
+            entityUsuario.Clave = modelUsuario.Clave;            
         }
 
 
@@ -60,8 +57,7 @@ namespace BiblioMonolitica.web.Mappeo
          proporcionados en un DeleteEstadoPrestamoModel */
         public static void DeleteEntityUsuario(DeleteUsuarioModel deleteModel, Usuario deleteEntity)
         {
-            deleteEntity.FechaEliminacion = deleteModel.FechaEliminacion;
-            deleteEntity.userDeleted = deleteModel.userDeleted;
+            deleteEntity.idUsuario = deleteModel.idUsuario;
 
 
         }

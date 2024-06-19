@@ -2,7 +2,7 @@
 
 namespace BiblioMonolitica.web.Data.Models.EstadoPrestamo
 {
-    public class UpdateEstadoPrestamoModel : BaseEntity
+    public class UpdateEstadoPrestamoModel : EstadoPrestamoBaseModel
     {
        
 

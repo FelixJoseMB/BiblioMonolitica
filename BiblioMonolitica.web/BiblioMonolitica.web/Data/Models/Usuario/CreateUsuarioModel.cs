@@ -2,9 +2,10 @@
 
 namespace BiblioMonolitica.web.Data.Models.Usuario
 {
-    public class CreateUsuarioModel : BaseEntity
+    public class CreateUsuarioModel : UsuarioBaseModel
     {
-       
+        public DateTime FechaCreacion { get; set; }
+
 
     }
 }

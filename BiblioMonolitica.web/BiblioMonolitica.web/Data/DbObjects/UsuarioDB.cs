@@ -53,7 +53,7 @@ namespace BiblioMonolitica.web.Data.DbObjects
 
         public void Update(UpdateUsuarioModel updateUsuario)
         {
-            Usuario usuarioToUpdate = this.context.Usuario.Find(updateUsuario.idEstadoPrestamo);
+            Usuario usuarioToUpdate = this.context.Usuario.Find(updateUsuario.idUsuario);
             UsuarioMapper.UpdateEntityUsuario(updateUsuario, usuarioToUpdate);
 
             this.context.Usuario.Update(usuarioToUpdate);

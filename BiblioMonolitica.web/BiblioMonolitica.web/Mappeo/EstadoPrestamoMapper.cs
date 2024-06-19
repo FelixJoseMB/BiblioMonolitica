@@ -39,8 +39,7 @@ namespace BiblioMonolitica.web.Mappeo
             {
             updateEntity.Descripcion = updateModel.Descripcion;
             updateEntity.Estado = updateModel.Estado;
-            updateEntity.UserMod = updateModel.UserMod;
-            updateEntity.FechaModificacion = updateModel.FechaModificacion;
+            
          }
 
         /*DeleteEntityEstadoPrestamo(DeleteEstadoPrestamoModel deleteModel, EstadoPrestamo deleteEntity)
@@ -48,8 +47,7 @@ namespace BiblioMonolitica.web.Mappeo
          proporcionados en un DeleteEstadoPrestamoModel */
         public static void DeleteEntityEstadoPrestamo(DeleteEstadoPrestamoModel deleteModel, EstadoPrestamo deleteEntity)
         {
-            deleteEntity.FechaEliminacion = deleteModel.FechaEliminacion;
-            deleteEntity.userDeleted = deleteModel.userDeleted;
+            deleteEntity.idEstadoPrestamo = deleteModel.idEstadoPrestamo;
 
 
         }

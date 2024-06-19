@@ -2,7 +2,7 @@
 
 namespace BiblioMonolitica.web.Data.Models.Usuario
 {
-    public class DeleteUsuarioModel : BaseEntity
+    public class DeleteUsuarioModel: UsuarioBaseModel
     {
     }
 }
