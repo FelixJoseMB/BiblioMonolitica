@@ -1,0 +1,66 @@
+﻿@model IEnumerable<BiblioMonolitica.web.Data.Models.Usuario.UsuarioModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idUsuario)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.NombreApellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.esActivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clave)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idUsuario)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreApellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.esActivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clave)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.idUsuario }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idUsuario }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idUsuario })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,4 +1,4 @@
-﻿namespace BiblioMonolitica.web.Data.Models.Usuario
+﻿namespace BiblioMonolitica.web.Data.Models.Usuario.Model
 {
     public abstract class ModelBaseUsuario
     {

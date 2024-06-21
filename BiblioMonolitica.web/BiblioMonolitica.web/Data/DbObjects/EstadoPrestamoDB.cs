@@ -22,8 +22,8 @@ namespace BiblioMonolitica.web.Data.DbObjects
         {
            
             var estadoPrestamo = EstadoPrestamoMapper.ToEntity(createEstadoPrestamo);
+            estadoPrestamo.Estado = true;
 
-            
             this.context.EstadoPrestamo.Add(estadoPrestamo);
             this.context.SaveChanges();
         }
@@ -32,10 +32,15 @@ namespace BiblioMonolitica.web.Data.DbObjects
         {
             EstadoPrestamo estadoPrestamoToDelete = this.context.EstadoPrestamo.Find(deleteEstadoPrestamo.idEstadoPrestamo);
 
+            if (estadoPrestamoToDelete == null)
+            {
+                throw new ArgumentException("Estado Prestamo no encontrado");
+            }
 
             // Utilizar el método DeleteEntityEstadoPrestamo para eliminar la entidad con los datos de eliminación
             EstadoPrestamoMapper.DeleteEntityEstadoPrestamo(deleteEstadoPrestamo, estadoPrestamoToDelete);
 
+                 estadoPrestamoToDelete.Estado = false;
                 // Actualizar la entidad en el contexto y guardar los cambios en la base de datos
                 this.context.EstadoPrestamo.Remove(estadoPrestamoToDelete);
                 this.context.SaveChanges();

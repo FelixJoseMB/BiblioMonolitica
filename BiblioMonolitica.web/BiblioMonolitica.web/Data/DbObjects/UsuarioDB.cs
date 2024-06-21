@@ -1,8 +1,6 @@
 ﻿using BiblioMonolitica.web.Data.Content;
 using BiblioMonolitica.web.Data.Entities;
 using BiblioMonolitica.web.Data.Interfaces;
-using BiblioMonolitica.web.Data.Models;
-using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
 using BiblioMonolitica.web.Data.Models.Usuario;
 using BiblioMonolitica.web.Mappeo;
 
@@ -19,20 +17,28 @@ namespace BiblioMonolitica.web.Data.DbObjects
 
         public void Create(CreateUsuarioModel createUsuario)
         {
+
             var usuario = UsuarioMapper.ToEntity(createUsuario);
+            usuario.esActivo = true;
             this.context.Usuario.Add(usuario);
             this.context.SaveChanges();
         }
 
         public void Delete(DeleteUsuarioModel deleteUsuario)
         {
+
             Usuario usuarioToDelete = this.context.Usuario.Find(deleteUsuario.idUsuario);
 
+            if (usuarioToDelete == null)
+            {
+                throw new ArgumentException("Usuario no encontrado");
+            }
 
-            // Utilizar el método DeleteEntityEstadoPrestamo para eliminar la entidad con los datos de eliminación
+            // Utilizar el método DeleteEntityUsuario para eliminar la entidad con los datos de eliminación
             UsuarioMapper.DeleteEntityUsuario(deleteUsuario, usuarioToDelete);
 
             // Actualizar la entidad en el contexto y guardar los cambios en la base de datos
+            usuarioToDelete.esActivo = false;
             this.context.Usuario.Remove(usuarioToDelete);
             this.context.SaveChanges();
         }
@@ -44,9 +50,9 @@ namespace BiblioMonolitica.web.Data.DbObjects
 
         public UsuarioModel GetUsuario(int idUsuario)
         {
-            var estadoPrestamo = this.context.Usuario.Find(idUsuario);
+            var usuario = this.context.Usuario.Find(idUsuario);
 
-            return UsuarioMapper.ToModel(estadoPrestamo);
+            return UsuarioMapper.ToModel(usuario);
         }
 
         

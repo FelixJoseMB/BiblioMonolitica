@@ -1,8 +1,5 @@
 ﻿using BiblioMonolitica.web.Data.Entities;
-using BiblioMonolitica.web.Data.Models;
-using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
 using BiblioMonolitica.web.Data.Models.Usuario;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BiblioMonolitica.web.Mappeo
 {
@@ -40,11 +37,11 @@ namespace BiblioMonolitica.web.Mappeo
         }
 
         /*UpdateEntityUsuario(UpdateUsuarioModel modelUsuario,Usuario entityUsuario) 
-         Actualiza una entidad EstadoPrestamo existente con los datos 
-         proporcionados en un UpdateEstadoPrestamoModel*/
+         Actualiza una entidad Usuario existente con los datos 
+         proporcionados en un UpdateUsuarioModel*/
         public static void UpdateEntityUsuario(UpdateUsuarioModel modelUsuario,Usuario entityUsuario) 
         {
-            entityUsuario.idUsuario = modelUsuario.idUsuario;
+            
             entityUsuario.NombreApellidos = modelUsuario.NombreApellidos;
             entityUsuario.Correo = modelUsuario.Correo;
             entityUsuario.Clave = modelUsuario.Clave;            
@@ -53,11 +50,17 @@ namespace BiblioMonolitica.web.Mappeo
 
 
         /* DeleteEntityUsuario(DeleteUsuarioModel deleteModel, Usuario deleteEntity)
-         Elimina una entidad EstadoPrestamo existente con los datos 
-         proporcionados en un DeleteEstadoPrestamoModel */
+         Elimina una entidad Usuario existente con los datos 
+         proporcionados en un DeleteUsuarioModel */
         public static void DeleteEntityUsuario(DeleteUsuarioModel deleteModel, Usuario deleteEntity)
         {
+
             deleteEntity.idUsuario = deleteModel.idUsuario;
+            deleteEntity.NombreApellidos = deleteModel.NombreApellidos;
+            deleteEntity.Correo = deleteModel.Correo;
+            deleteEntity.Clave = deleteModel.Clave;
+
+
 
 
         }

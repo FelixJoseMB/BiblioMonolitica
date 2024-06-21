@@ -48,7 +48,8 @@ namespace BiblioMonolitica.web.Mappeo
         public static void DeleteEntityEstadoPrestamo(DeleteEstadoPrestamoModel deleteModel, EstadoPrestamo deleteEntity)
         {
             deleteEntity.idEstadoPrestamo = deleteModel.idEstadoPrestamo;
-
+            deleteEntity.Descripcion = deleteModel.Descripcion;
+            deleteEntity.Estado = deleteModel.Estado;
 
         }
     }

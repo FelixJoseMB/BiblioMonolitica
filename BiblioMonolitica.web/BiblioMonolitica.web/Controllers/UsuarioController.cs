@@ -1,4 +1,6 @@
-﻿using BiblioMonolitica.web.Data.Interfaces;
+﻿using BiblioMonolitica.web.Data.Entities;
+using BiblioMonolitica.web.Data.Interfaces;
+using BiblioMonolitica.web.Data.Models.Usuario;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,7 +25,18 @@ namespace BiblioMonolitica.web.Controllers
         // GET: UsuarioController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var Usuario = this.usuarioDb.GetUsuario(id);
+
+            var detailsUsuario = new UsuarioModel
+            {
+                idUsuario = Usuario.idUsuario,
+                NombreApellidos = Usuario.NombreApellidos,
+                Correo = Usuario.Correo,
+                Clave = Usuario.Clave,
+                esActivo = Usuario.esActivo
+            };
+            return View(detailsUsuario);
+            //return View(Usuario);
         }
 
         // GET: UsuarioController/Create
@@ -35,10 +48,11 @@ namespace BiblioMonolitica.web.Controllers
         // POST: UsuarioController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(CreateUsuarioModel createUsuarioModel)
         {
             try
             {
+                this.usuarioDb.Create(createUsuarioModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -50,16 +64,19 @@ namespace BiblioMonolitica.web.Controllers
         // GET: UsuarioController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+
+            var Usuario = this.usuarioDb.GetUsuario(id);
+            return View(Usuario);
         }
 
         // POST: UsuarioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(UpdateUsuarioModel updateUsuarioModel)
         {
             try
             {
+                this.usuarioDb.Update(updateUsuarioModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -71,21 +88,29 @@ namespace BiblioMonolitica.web.Controllers
         // GET: UsuarioController/Delete/5
         public ActionResult Delete(int id)
         {
+            
             return View();
         }
 
         // POST: UsuarioController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(DeleteUsuarioModel deleteUsuarioModel)
         {
             try
             {
+
+                this.usuarioDb.Delete(deleteUsuarioModel);
                 return RedirectToAction(nameof(Index));
+            }
+            catch (ArgumentException ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(deleteUsuarioModel);
             }
             catch
             {
-                return View();
+                return View(deleteUsuarioModel);
             }
         }
     }
