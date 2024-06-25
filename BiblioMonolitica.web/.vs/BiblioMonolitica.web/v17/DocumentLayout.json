@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\data\\dbobjects\\estadoprestamodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\data\\dbobjects\\estadoprestamodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\service\\estadoprestamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\service\\estadoprestamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\validaciones\\usuariovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\validaciones\\usuariovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\validaciones\\estadoprestamovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\validaciones\\estadoprestamovalidaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\core\\serviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\core\\serviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|c:\\pro\\itla\\bibliomonolitica\\bibliomonolitica.web\\bibliomonolitica.web\\bl\\exeptions\\serviceresultexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5849E510-C693-4808-8EBF-A7273348E036}|BiblioMonolitica.web\\BiblioMonolitica.web.csproj|solutionrelative:bibliomonolitica.web\\bl\\exeptions\\serviceresultexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +42,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EstadoPrestamoDB.cs",
-              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\DbObjects\\EstadoPrestamoDB.cs",
-              "RelativeDocumentMoniker": "BiblioMonolitica.web\\Data\\DbObjects\\EstadoPrestamoDB.cs",
-              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\Data\\DbObjects\\EstadoPrestamoDB.cs",
-              "RelativeToolTip": "BiblioMonolitica.web\\Data\\DbObjects\\EstadoPrestamoDB.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBgAAAApAAAA",
+              "DocumentIndex": 3,
+              "Title": "EstadoPrestamoValidaciones.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Validaciones\\EstadoPrestamoValidaciones.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Validaciones\\EstadoPrestamoValidaciones.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Validaciones\\EstadoPrestamoValidaciones.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Validaciones\\EstadoPrestamoValidaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T00:58:15.673Z",
+              "WhenOpened": "2024-06-25T17:48:25.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioValidaciones.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Validaciones\\UsuarioValidaciones.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Validaciones\\UsuarioValidaciones.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Validaciones\\UsuarioValidaciones.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Validaciones\\UsuarioValidaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:35:56.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceResultException.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Exeptions\\ServiceResultException.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Exeptions\\ServiceResultException.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Exeptions\\ServiceResultException.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Exeptions\\ServiceResultException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:42:01.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceResult.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Core\\ServiceResult.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Core\\ServiceResult.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Core\\ServiceResult.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Core\\ServiceResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:09:26.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Service\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Service\\UsuarioService.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Service\\UsuarioService.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Service\\UsuarioService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAhwFIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:14:38.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstadoPrestamoService.cs",
+              "DocumentMoniker": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Service\\EstadoPrestamoService.cs",
+              "RelativeDocumentMoniker": "BiblioMonolitica.web\\BL\\Service\\EstadoPrestamoService.cs",
+              "ToolTip": "C:\\pro\\itla\\BiblioMonolitica\\BiblioMonolitica.web\\BiblioMonolitica.web\\BL\\Service\\EstadoPrestamoService.cs",
+              "RelativeToolTip": "BiblioMonolitica.web\\BL\\Service\\EstadoPrestamoService.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAA6wFMAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T01:28:01.851Z",
               "EditorCaption": ""
             }
           ]

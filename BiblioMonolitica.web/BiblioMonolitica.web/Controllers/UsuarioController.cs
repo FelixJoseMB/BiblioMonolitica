@@ -1,42 +1,38 @@
-﻿using BiblioMonolitica.web.Data.Entities;
+﻿using BiblioMonolitica.web.BL.Interfaces;
+using BiblioMonolitica.web.BL.Service;
+using BiblioMonolitica.web.Data.Entities;
 using BiblioMonolitica.web.Data.Interfaces;
 using BiblioMonolitica.web.Data.Models.Usuario;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BiblioMonolitica.web.Controllers
 {
     public class UsuarioController : Controller
     {
-        private readonly IUsuario usuarioDb;
+        private readonly IUsuarioService usuarioService;
 
-        public UsuarioController(IUsuario usuarioDb)
+        public UsuarioController(IUsuarioService usuarioService)
         {
-            this.usuarioDb = usuarioDb;
+            this.usuarioService = usuarioService;
         }
 
         // GET: UsuarioController
         public ActionResult Index()
         {
-            var usuario = this.usuarioDb.GetUsuario();
+            var result = this.usuarioService.GetUsuario();
+
+            var usuario = (List<UsuarioModel>)result.Data;
             return View(usuario);
         }
 
         // GET: UsuarioController/Details/5
         public ActionResult Details(int id)
         {
-            var Usuario = this.usuarioDb.GetUsuario(id);
+            var Usuario = this.usuarioService.GetUsuarioByID(id).Data ;
 
-            var detailsUsuario = new UsuarioModel
-            {
-                idUsuario = Usuario.idUsuario,
-                NombreApellidos = Usuario.NombreApellidos,
-                Correo = Usuario.Correo,
-                Clave = Usuario.Clave,
-                esActivo = Usuario.esActivo
-            };
-            return View(detailsUsuario);
-            //return View(Usuario);
+            return View(Usuario);
         }
 
         // GET: UsuarioController/Create
@@ -52,7 +48,7 @@ namespace BiblioMonolitica.web.Controllers
         {
             try
             {
-                this.usuarioDb.Create(createUsuarioModel);
+                this.usuarioService.CreateUsuarioModel(createUsuarioModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -65,8 +61,9 @@ namespace BiblioMonolitica.web.Controllers
         public ActionResult Edit(int id)
         {
 
-            var Usuario = this.usuarioDb.GetUsuario(id);
-            return View(Usuario);
+            var usuario = this.usuarioService.GetUsuarioByID(id).Data ;
+            return View(usuario);
+
         }
 
         // POST: UsuarioController/Edit/5
@@ -76,8 +73,11 @@ namespace BiblioMonolitica.web.Controllers
         {
             try
             {
-                this.usuarioDb.Update(updateUsuarioModel);
-                return RedirectToAction(nameof(Index));
+                var result = this.usuarioService.UpdateModelUsuario(updateUsuarioModel);
+               
+                    return RedirectToAction(nameof(Index));
+                
+               
             }
             catch
             {
@@ -100,7 +100,7 @@ namespace BiblioMonolitica.web.Controllers
             try
             {
 
-                this.usuarioDb.Delete(deleteUsuarioModel);
+                this.usuarioService.DeleteUsuarioModel(deleteUsuarioModel);
                 return RedirectToAction(nameof(Index));
             }
             catch (ArgumentException ex)

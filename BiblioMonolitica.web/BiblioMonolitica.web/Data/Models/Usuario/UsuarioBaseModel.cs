@@ -1,4 +1,6 @@
 ﻿using BiblioMonolitica.web.Data.Models.Usuario.Model;
+using BiblioMonolitica.web.BL.Validaciones;
+using BiblioMonolitica.web.BL.Exeptions;
 
 namespace BiblioMonolitica.web.Data.Models.Usuario
 {
@@ -8,7 +10,7 @@ namespace BiblioMonolitica.web.Data.Models.Usuario
         public string Correo { get; set; }
         public string Clave { get; set; }
         public bool? esActivo { get; set; }
-        
 
+       
     }
 }

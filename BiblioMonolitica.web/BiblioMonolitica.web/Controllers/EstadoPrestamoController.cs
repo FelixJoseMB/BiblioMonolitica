@@ -1,4 +1,5 @@
-﻿using BiblioMonolitica.web.Data.Interfaces;
+﻿using BiblioMonolitica.web.BL.Interfaces;
+using BiblioMonolitica.web.Data.Interfaces;
 using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
 using BiblioMonolitica.web.Data.Models.Usuario;
 using Microsoft.AspNetCore.Http;
@@ -8,34 +9,29 @@ namespace BiblioMonolitica.web.Controllers
 {
     public class EstadoPrestamoController : Controller
     {
-        private readonly IEstadoPrestamo estadoPrestamoDb;
+        private readonly IEstadoPrestamoService estadoPrestamoService;
 
-        public EstadoPrestamoController(IEstadoPrestamo estadoPrestamoDb)
+        public EstadoPrestamoController(IEstadoPrestamoService estadoPrestamoService)
         {
-            this.estadoPrestamoDb = estadoPrestamoDb;
+            this.estadoPrestamoService = estadoPrestamoService;
         }
 
         // GET: EstadoPrestamoController
         public ActionResult Index()
         {
-            var estadoPrestamo = this.estadoPrestamoDb.GetEstadoPrestamo();
+            var result = this.estadoPrestamoService.GetEstadoPrestamo();
+
+            var estadoPrestamo = (List<EstadoPrestamoModel>)result.Data;
             return View(estadoPrestamo);
         }
 
         // GET: EstadoPrestamoController/Details/5
         public ActionResult Details(int id)
         {
-            var EstadoPrestamo = this.estadoPrestamoDb.GetEstadoPrestamo(id);
+            var estadoPrestamo = this.estadoPrestamoService.GetEstadoPrestamoByID(id).Data;
 
-            var detailsEstadoPrestamo = new EstadoPrestamoModel
-            {
-                idEstadoPrestamo = EstadoPrestamo.idEstadoPrestamo,
-                Estado = EstadoPrestamo.Estado,
-                Descripcion = EstadoPrestamo.Descripcion
-                
-            };
-            return View(detailsEstadoPrestamo);
-            
+            return View(estadoPrestamo);
+
         }
 
         // GET: EstadoPrestamoController/Create
@@ -51,7 +47,7 @@ namespace BiblioMonolitica.web.Controllers
         {
             try
             {
-                this.estadoPrestamoDb.Create(createEstadoPrestamoModel);
+                this.estadoPrestamoService.CreateEstadoPrestamoModel(createEstadoPrestamoModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -63,7 +59,7 @@ namespace BiblioMonolitica.web.Controllers
         // GET: EstadoPrestamoController/Edit/5
         public ActionResult Edit(int id)
         {
-            var estadoPrestamo = this.estadoPrestamoDb.GetEstadoPrestamo(id);
+            var estadoPrestamo = this.estadoPrestamoService.GetEstadoPrestamoByID(id).Data;
             return View(estadoPrestamo);
         }
 
@@ -74,7 +70,8 @@ namespace BiblioMonolitica.web.Controllers
         {
             try
             {
-                this.estadoPrestamoDb.Update(updateEstadoPrestamoModel);
+                var result = this.estadoPrestamoService.UpdateModelEstadoPrestamo(updateEstadoPrestamoModel);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -97,7 +94,7 @@ namespace BiblioMonolitica.web.Controllers
             try
             {
 
-                this.estadoPrestamoDb.Delete(deleteEstadoPrestamoModel);
+                this.estadoPrestamoService.DeleteEstadoPrestamoModel(deleteEstadoPrestamoModel);
                 return RedirectToAction(nameof(Index));
             }
             catch (ArgumentException ex)

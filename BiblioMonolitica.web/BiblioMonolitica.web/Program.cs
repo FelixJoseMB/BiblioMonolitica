@@ -1,3 +1,6 @@
+using BiblioMonolitica.web.BL.Interfaces;
+using BiblioMonolitica.web.BL.Logger;
+using BiblioMonolitica.web.BL.Service;
 using BiblioMonolitica.web.Data.Content;
 using BiblioMonolitica.web.Data.DbObjects;
 using BiblioMonolitica.web.Data.Interfaces;
@@ -26,9 +29,14 @@ builder.Services.AddDbContext<BibliotecaContext>(options =>
 });
 
 builder.Services.AddScoped<IUsuario, UsuarioDB>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ILog, Log>();
 
 builder.Services.AddScoped<IEstadoPrestamo, EstadoPrestamoDB>();
+builder.Services.AddScoped<IEstadoPrestamoService, EstadoPrestamoService>();
 
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
+builder.Services.AddTransient<IEstadoPrestamoService, EstadoPrestamoService>();
 
 
 var app = builder.Build();

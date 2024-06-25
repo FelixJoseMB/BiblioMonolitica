@@ -1,4 +1,4 @@
-﻿namespace BiblioMonolitica.web.BLogin.Exeptions
+﻿namespace BiblioMonolitica.web.BL.Exeptions
 {
     public class UsuarioServiceException : Exception
     {

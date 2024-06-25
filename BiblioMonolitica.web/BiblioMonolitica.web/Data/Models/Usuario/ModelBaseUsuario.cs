@@ -1,4 +1,6 @@
-﻿namespace BiblioMonolitica.web.Data.Models.Usuario.Model
+﻿using BiblioMonolitica.web.BL.Validaciones;
+
+namespace BiblioMonolitica.web.Data.Models.Usuario.Model
 {
     public abstract class ModelBaseUsuario
     {

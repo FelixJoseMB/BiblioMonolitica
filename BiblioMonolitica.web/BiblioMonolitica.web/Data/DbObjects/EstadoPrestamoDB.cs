@@ -59,8 +59,6 @@ namespace BiblioMonolitica.web.Data.DbObjects
             return EstadoPrestamoMapper.ToModel(estadoPrestamo);
         }
 
-        
-
         public void Update(UpdateEstadoPrestamoModel updateEstadoPrestamo)
         {
             EstadoPrestamo estadoPrestamoToUpdate = this.context.EstadoPrestamo.Find(updateEstadoPrestamo.idEstadoPrestamo);

@@ -55,8 +55,6 @@ namespace BiblioMonolitica.web.Data.DbObjects
             return UsuarioMapper.ToModel(usuario);
         }
 
-        
-
         public void Update(UpdateUsuarioModel updateUsuario)
         {
             Usuario usuarioToUpdate = this.context.Usuario.Find(updateUsuario.idUsuario);
