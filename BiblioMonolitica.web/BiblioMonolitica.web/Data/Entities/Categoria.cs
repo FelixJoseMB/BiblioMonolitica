@@ -4,7 +4,15 @@ namespace BiblioMonolitica.web.Data.Entities
 {
     public class Categoria : BaseEntity
     {
-        public object FechaEliminacion { get; internal set; }
-        public object CategoriaDeleted { get; internal set; }
+        public int? idCategoria { get; set; }
+
+        public string? Descripcion {  get; set; }
+
+        public bool? Estado { get; set; }
+
+        public DateTime? FechaCreacion { get; set; }
+
+
+
     }
 }

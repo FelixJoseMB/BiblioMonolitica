@@ -4,8 +4,15 @@ namespace BiblioMonolitica.web.Data.Entities
 {
     public class NumeroCorrelativo : BaseEntity
     {
-        internal object NumeroCorrelativoDeleted;
+        public int? idNumeroCorrelativo { get; set; }
 
-        public object FechaEliminacion { get; internal set; }
+        public string? Prefijo { get; set; }
+
+        public string? Tipo { get; set; }
+
+        public int? UltimoNumero { get; set; }
+
+        public DateTime? FechaRegistro { get; set; }
+
     }
 }

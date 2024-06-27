@@ -1,10 +1,10 @@
-﻿using BiblioMonolitica.web.Data.Core;
+﻿
 
 
 namespace BiblioMonolitica.web.Data.Models.NumeroCorrelativoModels
 {
-    public class CreateNumeroCorrelativoModels : BaseEntity
+    public class CreateNumeroCorrelativoModels : NumeroCorrelativoBaseModel
     {
-
+        public DateTime? FechaRegistro { get; set; }
     }
 }

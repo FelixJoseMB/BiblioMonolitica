@@ -16,6 +16,7 @@ namespace BiblioMonolitica.web.Mappeo
                     
                 };
             }
+
             public static CategoriaModel ToModel(Categoria entityCategoria)
             {
                 return new CategoriaModel
@@ -27,6 +28,7 @@ namespace BiblioMonolitica.web.Mappeo
 
                 };
             }
+
             public static void UpdateEntityCategoria(UpdateCategoriaModels modelcategoria, Categoria entityCategoria)
             {
                 entityCategoria.idCategoria = modelcategoria.idCategoria;
@@ -38,9 +40,10 @@ namespace BiblioMonolitica.web.Mappeo
 
             public static void DeleteEntityCategoria(DeleteCategoriaModels deleteModel, Categoria deleteEntity)
             {
-                deleteEntity.FechaEliminacion = deleteModel.FechaEliminacion;
-                deleteEntity.CategoriaDeleted = deleteModel.CategoriaDeleted;
-
+                deleteEntity.idCategoria = deleteModel.idCategoria;
+                deleteEntity.Descripcion = deleteModel.Descripcion;
+                deleteEntity.Estado = deleteModel.Estado;
+                deleteEntity.FechaCreacion = deleteModel.FechaCreacion;
 
             }
 
