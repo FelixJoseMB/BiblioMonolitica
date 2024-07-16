@@ -1,67 +1,78 @@
-﻿using BiblioMonolitica.web.Data.Content;
+﻿using System.Linq.Expressions;
+using BiblioMonolitica.web.Data.Content;
+using BiblioMonolitica.web.Data.DbObjects;
 using BiblioMonolitica.web.Data.Entities;
+using BiblioMonolitica.web.Data.Exeptions;
 using BiblioMonolitica.web.Data.Interfaces;
-using BiblioMonolitica.web.Models;
-
+using BiblioMonolitica.web.Data.Models;
+using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
+using BiblioMonolitica.web.Mappeo;
 namespace BiblioMonolitica.web.Data.DbObjects
 {
-    public class PrestamosDb : IPrestamosDb
+
+    public class PrestamoDB : IPrestamoDb
     {
-        private object context;
 
-        public PrestamosDb(BibliotecaContext context)
+        private readonly BibliotecaContext context;
+
+        public PrestamoDB(BibliotecaContext context)
         {
-            
+            this.context = context;
         }
-        public List<PrestamosModel> Prestamos => throw new NotImplementedException();
 
-        public PrestamosModel GetPrestamos(int idPrestamos)
+        internal static dynamic Getdepartments()
         {
-        var prestamo = this.context.Prestamo.Find(idPrestamos);
-
-            PrestamosModel prestamosModel = new PrestamosModel() 
-            {
-             Estado = prestamo.Estado,
-             EstadoEntregado = prestamo.EstadoEntregado,
-             EstadoRecibido = prestamo.EstadoRecibido,
-             IdEstadoPrestamo = prestamo.IdEstadoPrestamo,
-             FechaConfirmacionDevolucion = prestamo.FechaConfirmacionDevolucion,
-             FechaDevolucion = prestamo.FechaDevolucion,
-            
-
-            };
-
-            return prestamosModel;
+            throw new NotImplementedException();
         }
-        public void savePrestamos(PrestamosSaveModel prestamosSave)
+
+        public void Create(CreatePrestamosModel createPrestamos)
         {
-            Prestamos prestamos = new Prestamos()
-            {
-             Estado = prestamosSave.Estado,
-             EstadoEntregado = prestamosSave.EstadoEntregado,
-             EstadoRecibido = prestamosSave.EstadoRecibido,
-             FechaConfirmacionDevolucion = prestamosSave.FechaConfirmacionDevolucion,
-             FechaDevolucion = prestamosSave.FechaDevolucion,
-             CreationUser  = prestamosSave.creationUser
-            };
-            this.context.Prestamos.Add(prestamos);
+
+            var Prestamo = PrestamoMapper.ToEntity(createPrestamos);
+            Prestamo.Estado = true;
+            this.context.Prestamos.Add(Prestamo);
             this.context.SaveChanges();
         }
-        public List<PrestamosModel> GetPrestamos() => context.Prestamos.Select();
 
-        public void removePrestamos()
+        public void Delete(DeletePrestamosModel deletePrestamos)
         {
-            throw new NotImplementedException();
+            Prestamos prestamostodelete = this.context.Prestamos.Find(deletePrestamos.idPrestamo);
+
+            if (prestamostodelete == null)
+            {
+                throw new ArgumentException("Prestamo no encontrado");
+            }
+
+
+            PrestamoMapper.DeleteEntityPrestamo(deletePrestamos, prestamostodelete);
+
+            prestamostodelete.Estado = false;
+            this.context.Prestamos.Remove(prestamostodelete);
+            this.context.SaveChanges();
+
         }
 
-        public void savePrestamos(PrestamosSaveModel prestamos)
+        
+
+        public List<PrestamosModel> GetPrestamos()
         {
-            throw new NotImplementedException();
+            return this.context.Prestamos.Select(PrestamoMapper.ToModel).ToList();
         }
 
-        public void UpdatePrestamos(PrestamosUpdateModel updateModel)
+        public PrestamosModel GetPrestamos(int idprestamo)
         {
-            Prestamos prestamos = this.context.Prestamos.find(updateModel.Estado)   
+            var prestamos = this.context.Prestamos.Find(idprestamo);
+
+            return PrestamoMapper.ToModel(prestamos);
+        }
+
+        public void Update(UpdatePrestamomodel updateprestamo)
+        {
+            Prestamos Prestamotoupdate = this.context.Prestamos.Find(updateprestamo.idPrestamo);
+            PrestamoMapper.UpdateentityPrestamo(updateprestamo, Prestamotoupdate);
+            this.context.Prestamos.Update(Prestamotoupdate);
+            this.context.SaveChanges();
+
         }
     }
 }

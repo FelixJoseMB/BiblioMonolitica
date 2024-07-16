@@ -1,16 +1,20 @@
 ﻿using BiblioMonolitica.web.Data.Entities;
-using BiblioMonolitica.web.Models;
+using BiblioMonolitica.web.Data.Models;
+using BiblioMonolitica.web.Data.Models.EstadoPrestamo;
+using Microsoft.Identity.Client;
+using System.Linq.Expressions;
 
 namespace BiblioMonolitica.web.Data.Interfaces
 {
-    public interface IPrestamosDb
+    public interface IPrestamoDb
     {
-        void savePrestamos(PrestamosSaveModel prestamos);
-        void UpdatePrestamos(PrestamosUpdateModel updateModel);
-        void removePrestamos();
-        List<PrestamosModel> Prestamos { get; }
+        void Create(CreatePrestamosModel createPrestamosModel);
+        void Update(UpdatePrestamomodel updatePrestamo);
+        void Delete(DeletePrestamosModel DeletePrestamo);
 
-        PrestamosModel GetPrestamos(int idPrestamos);
+        List<PrestamosModel> GetPrestamos();
+        PrestamosModel GetPrestamos(int IdPrestamo);
+
 
     }
 }

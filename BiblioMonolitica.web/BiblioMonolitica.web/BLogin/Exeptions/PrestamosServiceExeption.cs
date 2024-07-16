@@ -1,6 +1,8 @@
-﻿namespace BiblioMonolitica.web.BLogin.Exeptions
-{
-    public class PrestamosServiceExeption
+﻿
+    public class PrestamosServiceExeption : Exception
     {
+        public PrestamosServiceExeption(string message) : base(message)
+        {
+
+        }
     }
-}

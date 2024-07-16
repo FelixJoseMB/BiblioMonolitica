@@ -2,10 +2,9 @@
 {
     public abstract class BaseEntity
     {
-        public bool Estado { get; set; }
+        public bool? Estado { get; set; }
 
         public DateTime FechaCreacion { get; set; }
-
 
         public string Descripcion { get; set; }
 
@@ -14,8 +13,14 @@
         public string Clave { get; set; }
 
         public string Correo { get; set; }
+        public string? UserMod { get; set; }
 
+        public DateTime? FechaModificacion { get; set; }
 
+        public string userDeleted { get; set; }
+
+        public DateTime? FechaEliminacion { get; set; }
+        public int idprestamo { get; set; }
 
     }
 }

@@ -1,10 +1,11 @@
 ﻿namespace BiblioMonolitica.web.Data.Exeptions
 {
-    public class PrestamosDbExeptions 
+    public class PrestamosDbExceptions : Exception
     {
-        public PrestamosDbExeptions(string message) 
-        { 
-        
+        public PrestamosDbExceptions(string message) : base(message)
+        {
+
         }
+
     }
 }
